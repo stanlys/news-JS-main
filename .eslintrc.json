@@ -2,7 +2,15 @@
     "plugins": ["prettier", "import"],
     "extends": [
         "plugin:prettier/recommended",
-        "prettier"
+        "prettier",		
+        // Базовый набор правил eslint
+		"eslint:recommended",
+		// Отключаем правила из базового набора
+		"plugin:@typescript-eslint/eslint-recommended",
+		// Базовые правила для TypeScript
+		"plugin:@typescript-eslint/recommended",
+		 // Правила TS, требующие инфо о типах
+		"plugin:@typescript-eslint/recommended-requiring-type-checking"
     ],
     "parserOptions": {
         "ecmaVersion": 2020,
